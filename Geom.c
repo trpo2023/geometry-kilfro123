@@ -250,8 +250,6 @@ void output_circle_message(struct Circle* circle)
            circle->center.x,
            circle->center.y,
            circle->radius);
-    printf("perimeter: %.4f\n", (2 * M_PI * circle->radius));
-    printf("area: %.4f\n", ((circle->radius * circle->radius) * M_PI));
 }
 
 int main()
