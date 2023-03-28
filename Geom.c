@@ -39,51 +39,51 @@ void output_bugs(int errors, int num, char* ch)
     case BUG_NAME:
         printf("An error %d was found in the input line %s'Circle'%s\n",
                num,
-               RED_FLASH
+               RED_FLASH,
                END);
         break;
     case BUG_STAPLES:
         if (*ch == ')') {
             printf("An error %d was found in the input line %s')'%s\n",
                    num,
-                   RED_FLASH
+                   RED_FLASH,
                    END);
             break;
         } else {
             printf("An error %d was found in the input line %s'('%s\n",
                    num,
-                   RED_FLASH
+                   RED_FLASH,
                    END);
             break;
         }
     case BUG_STAPLES_2:
         printf("An error %d was found in the input line %s')'%s\n",
                num,
-               RED_FLASH
+               RED_FLASH,
                END);
         break;
     case BUG_NUMBER:
         printf("An error %d was found in the input line %s'double'%s\n",
                num,
-               RED_FLASH
+               RED_FLASH,
                END);
         break;
     case BUG_UNIDENTIFIED_VARIABLES:
         printf("An error %d was found in the input line %s'variable'%s\n",
                num,
-               RED_FLASH
+               RED_FLASH,
                END);
         break;
     case BUG_EXPECT_COMMA:
         printf("An error %d was found in the input line %s','%s\n",
                num,
-               RED_FLASH
+               RED_FLASH,
                END);
         break;
     case BUG_EXTRA_POINT:
         printf("An error %d was found in the input line %s'.'%s\n",
                num,
-               RED_FLASH
+               RED_FLASH,
                END);
         break;
     }
@@ -250,6 +250,8 @@ void output_circle_message(struct Circle* circle)
            circle->center.x,
            circle->center.y,
            circle->radius);
+    printf("perimeter: %.4f\n", (2 * M_PI * circle->radius));
+    printf("area: %.4f\n", ((circle->radius * circle->radius) * M_PI));
 }
 
 int main()
